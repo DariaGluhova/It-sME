@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT'S ME // GAME_MECHANICS</title>
+  <link rel="icon" type="image/png" href="rose.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="noise-overlay"></div>
+
+  <!-- Системная шапка -->
+  <header class="sys-header">
+    <div class="header-left">
+      <button class="sys-btn" id="authBtn">[ AUTH_SIGN_IN ]</button>
+      <span class="sys-status">SYS_STATUS: GAME_MECHANICS_ACTIVE</span>
+    </div>
+
+    <div class="sys-logo">
+      <span class="glitch-text" data-text="IT'S ME">IT'S ME</span>
+      <span class="sub-logo">// ENGINE_SPECS_V0.1.08</span>
+    </div>
+
+    <div class="header-right">
+      <div class="search-wrapper">
+        <input type="text" class="sys-input" placeholder="SEARCH_MECHANIC..." spellcheck="false">
+        <button class="search-btn" title="Execute Search">
+          <img src="magnifier.jpg" alt="Search">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Главный контейнер (с единой общей подложкой) -->
+  <div class="terminal-layout single-column-layout">
+
+    <!-- Приветственный блок -->
+    <div class="sys-block border-glitch welcome-container" style="grid-column: 1 / -1; margin-bottom: 0;">
+      <div class="block-header">
+        <span class="block-id">SYS_FILE // 0x050_GAME_MECHANICS.LOG</span>
+        <span class="block-tag glitch-text" data-text="[ENGINE_SPECIFICATION]">[ENGINE_SPECIFICATION]</span>
+      </div>
+      <h1 class="welcome-title glitch-text" data-text="GAME MECHANICS // CORE SYSTEMS">
+        GAME MECHANICS // CORE SYSTEMS
+      </h1>
+    </div>
+
+    <!-- Навигационная консоль (5 кнопок) -->
+    <nav class="sys-nav">
+      <a href="index.html" class="nav-btn">[ HOME ]</a>
+      <a href="characters.html" class="nav-btn">[ 01_CHARACTERS ]</a>
+      <a href="lore.html" class="nav-btn">[ 02_LORE_FILES ]</a>
+      <a href="maps.html" class="nav-btn">[ 03_MAP_SCHEMATICS ]</a>
+      <a href="strategy.html" class="nav-btn">[ 04_STRATEGY_MATRIX ]</a>
+    </nav>
+
+    <main class="main-terminal">
+      
+      <!-- Блок содержания -->
+      <section class="sys-block border-single lore-contents-box">
+        <div class="block-header">
+          <span class="block-id">SYS_NAV // SYSTEMS_INDEX</span>
+          <span class="block-tag">[CONTENTS]</span>
+        </div>
+        <div class="contents-grid-links">
+          <a href="#intermission">[ 01_INTERMISSION_LOBBY ]</a>
+          <a href="#standard-round">[ 02_STANDARD_ROUND ]</a>
+          <a href="#engine-core">[ 03_ENGINE_CORE ]</a>
+          <a href="#anomaly-physics">[ 04_ANOMALY_PHYSICS ]</a>
+        </div>
+      </section>
+
+      <!-- РАЗДЕЛ 1: АНТРАКТ -->
+      <section id="intermission" class="sys-block border-double margin-top-block">
+        <div class="block-header">
+          <span class="block-id">SYS_FILE // 0x051_INTERMISSION.LOG</span>
+          <span class="block-tag glitch-text" data-text="[LOBBY_STATE]"><span>[LOBBY_STATE]</span></span>
+        </div>
+        <h2 class="category-title"><span class="cat-prefix">></span> INTERMISSION [VESTIBULE PROTOCOL]</h2>
+        <p class="mono-sub">SYSTEM LOBBY, WAITING PERIODS, AND PRE-ROUND ACTIONS.</p>
+        <div class="console-divider"></div>
+
+        <p class="lore-text-content" style="margin-bottom: 14px;">
+          Когда вы присоединяетесь к игре, вы появляетесь внутри <strong>Вестибюля</strong>. Вас также отправят обратно в вестибюль, когда текущий раунд закончится или когда вы умрете.
+        </p>
+        <p class="lore-text-content" style="margin-bottom: 14px;">
+          В вестибюле вы можете получить доступ к <strong>магазину, инвентарю, достижениям, статистике, настройкам и правилам</strong>. Вы также можете наблюдать за игроками, находящимися в данный момент в раунде, но только если раунд уже идет.
+        </p>
+        <p class="lore-text-content">
+          Период антракта длится <strong>50 секунд</strong>, прежде чем вас отправят в раунд. Если вы находитесь в режиме AFK, включенном через настройки или напольные часы в вестибюле, вас не отправят в раунд.
+        </p>
+      </section>
+
+      <!-- РАЗДЕЛ 2: СТАНДАРТ -->
+      <section id="standard-round" class="sys-block border-double margin-top-block">
+        <div class="block-header">
+          <span class="block-id">SYS_FILE // 0x052_STANDARD_ROUND.LOG</span>
+          <span class="block-tag glitch-text" data-text="[HUNT_PROTOCOL]"><span>[HUNT_PROTOCOL]</span></span>
+        </div>
+        <h2 class="category-title title-killer"><span class="cat-prefix">></span> STANDARD [ROUND_EXECUTION]</h2>
+        <p class="mono-sub">SIMULATION ROUND START, BOT SPAWNS, ROLES, AND OBJECTIVE TIMERS.</p>
+        <div class="console-divider"></div>
+
+        <p class="lore-text-content" style="margin-bottom: 14px;">
+          После загрузки в раунд вас выбирают <strong>Выжившим</strong>, но когда игрок накопил много лагов, бот копирует его скин и рандомно выбирает убийцу, после чего начнется кат-сцена, демонстрирующая Убийцу. После окончания раунда все игроки возвращаются в вестибюль с экраном результатов.
+        </p>
+
+        <div class="news-grid" style="margin-top: 16px;">
+          <div class="news-box corrupted">
+            <span class="box-tag">ROLE: KILLER</span>
+            <span class="box-status">ANOMALOUS OBJECTIVE</span>
+            <p class="box-desc">Основная цель Убийцы — убить каждого выжившего, используя его способности (в первую очередь M1), чтобы свести HP выживших к нулю. Убийство выжившего добавляет <strong>50 секунд</strong> к таймеру раунда, давая больше времени на устранение остальных.</p>
+          </div>
+          <div class="news-box">
+            <span class="box-tag">ROLE: SURVIVOR</span>
+            <span class="box-status">SURVIVAL & TASKS</span>
+            <p class="box-desc">У Выживших две основные цели: пережить убийцу, пока таймер не дойдет до нуля, а также завершить <strong>Цели</strong>, разбросанные по карте. Выполнение всех задач вычитает из таймера в общей сложности <strong>30 секунд</strong>, сокращая время убийцы.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- РАЗДЕЛ 3: ЯДРО ДВИЖКА -->
+      <section id="engine-core" class="sys-block border-double margin-top-block">
+        <div class="block-header">
+          <span class="block-id">SYS_FILE // 0x053_ENGINE_CORE.LOG</span>
+          <span class="block-tag glitch-text" data-text="[CORE_PARAMETERS]"><span>[CORE_PARAMETERS]</span></span>
+        </div>
+        <h2 class="category-title"><span class="cat-prefix">></span> SIMULATION ENGINE SPECIFICATIONS</h2>
+        <p class="mono-sub">LOW-LEVEL ARCHITECTURE AND RECURSIVE LOOP PARAMETERS.</p>
+        <div class="console-divider"></div>
+
+        <div class="news-grid">
+          <div class="news-box">
+            <span class="box-tag">SYSTEM #01</span>
+            <span class="box-status">TICK RATE & LATENCY</span>
+            <p class="box-desc">Серверные операции выполняются в фиксированном цикле с частотой 60 Гц с намеренным нарушением синхронизации для имитации атмосферы ужаса и джиттера пакетов.</p>
+          </div>
+          <div class="news-box">
+            <span class="box-tag">SYSTEM #02</span>
+            <span class="box-status">MEMORY BLEED</span>
+            <p class="box-desc">Длительные сеансы приводят к появлению визуальных артефактов и ухудшению работы шейдеров, что напрямую повышает уровень страха у активных заключенных.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- РАЗДЕЛ 4: ФИЗИКА АНОМАЛИЙ -->
+      <section id="anomaly-physics" class="sys-block border-double margin-top-block">
+        <div class="block-header">
+          <span class="block-id">SYS_FILE // 0x054_PHYSICS.LOG</span>
+          <span class="block-tag glitch-text" data-text="[COLLISION_ERRORS]"><span>[COLLISION_ERRORS]</span></span>
+        </div>
+        <h2 class="category-title title-killer"><span class="cat-prefix">></span> ANOMALOUS PHYSICS MATRIX</h2>
+        <p class="mono-sub">BEHAVIOR OF OBJECTS AND ENTITIES UNDER ENGINE STRESS.</p>
+        <div class="console-divider"></div>
+
+        <div class="news-grid">
+          <div class="news-box corrupted">
+            <span class="box-tag">ERROR: CLIP_FAILURE</span>
+            <span class="box-status">WALL CLIPPING</span>
+            <p class="box-desc">В устаревших блоках отсутствуют сетки коллизий. И выжившие, и убийцы могут использовать зазоры между границами блоков, если вовремя нанести удар с высокой скоростью.</p>
+          </div>
+          <div class="news-box corrupted">
+            <span class="box-tag">ERROR: GRAVITY_FLUX</span>
+            <span class="box-status">VERTICAL DRIFT</span>
+            <p class="box-desc">При перезагрузке секторов векторные вычисления иногда инвертируются, что приводит к непреднамеренному вертикальному ускорению на старых картах.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Вики-футер -->
+  <div class="wiki-footer">
+    <p>This page was last edited on 5 November 2026</p>
+    <div class="wiki-footer-links">
+      <a href="index.html">Main Page</a>
+      <span>•</span>
+      <a href="characters.html">Characters</a>
+      <span>•</span>
+      <a href="lore.html">Lore Files</a>
+      <span>•</span>
+      <a href="maps.html">Maps</a>
+      <span>•</span>
+      <a href="strategy.html">Strategy</a>
+      <span>•</span>
+      <a href="mechanics.html">Mechanics</a>
+      <span>•</span>
+      <a href="#">Privacy policy</a>
+    </div>
+  </div>
+
+  <!-- МОДАЛЬНОЕ ОКНО АВТОРИЗАЦИИ -->
+  <div id="authModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.85); z-index: 9999; align-items: center; justify-content: center;">
+    <div class="sys-block border-double" style="width: 100%; max-width: 440px; background: #080202; border: 3px double #8B0000; padding: 20px; position: relative;">
+      <div class="block-header" style="display: flex; justify-content: space-between; border-bottom: 1px solid #4A1515; padding-bottom: 6px; margin-bottom: 14px;">
+        <span style="color: #7E6A6A; font-size: 0.75rem; font-family: monospace;">[ AUTH_SIGN_IN ] // REGISTRY</span>
+        <button id="closeAuthModal" style="background: transparent; border: none; color: #FF1A1A; cursor: pointer; font-size: 0.9rem; font-family: monospace;">[ X ]</button>
+      </div>
+      
+      <h3 style="color: #FFFFFF; font-size: 1.4rem; text-align: center; margin-bottom: 10px; font-family: monospace;">SYSTEM AUTHENTICATION</h3>
+      <p style="color: #7E6A6A; font-size: 0.85rem; text-align: center; margin-bottom: 16px; font-family: monospace;">LOCAL BROWSER REGISTRY ACCESS</p>
+
+      <form onsubmit="return false;">
+        <div style="margin-bottom: 12px;">
+          <label style="color: #7E6A6A; font-size: 0.75rem; display: block; margin-bottom: 4px; font-family: monospace;">SUBJECT_NAME (LOGIN):</label>
+          <input type="text" id="authUsername" style="width: 100%; background: #020000; border: 1px solid #4A1515; padding: 8px; color: #FFFFFF; font-family: monospace;" autocomplete="off" required />
+        </div>
+
+        <div style="margin-bottom: 12px;">
+          <label style="color: #7E6A6A; font-size: 0.75rem; display: block; margin-bottom: 4px; font-family: monospace;">PASSCODE (PASSWORD):</label>
+          <input type="password" id="authPassword" style="width: 100%; background: #020000; border: 1px solid #4A1515; padding: 8px; color: #FFFFFF; font-family: monospace;" required />
+        </div>
+
+        <div id="authStatusMessage" style="min-height: 20px; text-align: center; font-size: 0.8rem; margin: 10px 0; font-family: monospace;"></div>
+
+        <div style="display: flex; gap: 10px; margin-top: 15px;">
+          <button type="button" id="loginBtn" style="flex: 1; background: #080202; color: #FFFFFF; border: 1px solid #8B0000; padding: 8px; cursor: pointer; font-family: monospace;">[ LOGIN ]</button>
+          <button type="button" id="registerBtn" style="flex: 1; background: #080202; color: #FFFFFF; border: 1px solid #8B0000; padding: 8px; cursor: pointer; font-family: monospace;">[ REGISTER ]</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script src="admin.js"></script>
+  <script src="search.js"></script>
+</body>
+</html>

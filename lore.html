@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT'S ME // LORE_ARCHIVES</title>
+  <link rel="icon" type="image/png" href="rose.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="noise-overlay"></div>
+
+  <!-- Системная шапка -->
+  <header class="sys-header">
+    <div class="header-left">
+      <button class="sys-btn" id="authBtn">[ AUTH_SIGN_IN ]</button>
+      <span class="sys-status">SYS_STATUS: LORE_ARCHIVES_ACTIVE</span>
+    </div>
+
+    <div class="sys-logo">
+      <span class="glitch-text" data-text="IT'S ME">IT'S ME</span>
+      <span class="sub-logo">// ARCHIVES_DATABASE_V0.1.08</span>
+    </div>
+
+    <div class="header-right">
+      <div class="search-wrapper">
+        <input type="text" class="sys-input" placeholder="SEARCH_LORE..." spellcheck="false">
+        <button class="search-btn" title="Execute Search">
+          <img src="magnifier.jpg" alt="Search">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Главный контейнер -->
+  <div class="terminal-layout single-column-layout">
+
+    <!-- Приветственный блок внутри общей подложки -->
+    <div class="sys-block border-glitch welcome-container" style="grid-column: 1 / -1; margin-bottom: 0;">
+      <div class="block-header">
+        <span class="block-id">SYS_FILE // 0x020_LORE_DATABASE.LOG</span>
+        <span class="block-tag glitch-text" data-text="[ARCHIVES]">[ARCHIVES]</span>
+      </div>
+      <h1 class="welcome-title glitch-text" data-text="LORE ARCHIVES // CLASSIFIED FILES">
+        LORE ARCHIVES // CLASSIFIED FILES
+      </h1>
+    </div>
+
+    <!-- Навигационная консоль (6 кнопок) -->
+    <nav class="sys-nav">
+      <a href="index.html" class="nav-btn">[ HOME ]</a>
+      <a href="characters.html" class="nav-btn">[ 01_CHARACTERS ]</a>
+      <a href="maps.html" class="nav-btn">[ 03_MAP_SCHEMATICS ]</a>
+      <a href="strategy.html" class="nav-btn">[ 04_STRATEGY_MATRIX ]</a>
+      <a href="mechanics.html" class="nav-btn">[ 05_GAME_MECHANICS ]</a>
+    </nav>
+
+    <main class="main-terminal">
+      
+      <!-- Блок содержания -->
+      <section class="sys-block border-single lore-contents-box">
+        <div class="block-header">
+          <span class="block-id">SYS_NAV // INDEX</span>
+          <span class="block-tag">[CONTENTS]</span>
+        </div>
+        <div class="contents-grid-links">
+          <a href="#prologue">[ 01_PROLOGUE ]</a>
+          <a href="#anomalies">[ 02_ANOMALOUS_LOGS ]</a>
+        </div>
+      </section>
+
+      <!-- Основной лор-блок -->
+      <section id="prologue" class="sys-block border-double margin-top-block">
+        <div class="block-header">
+          <span class="block-id">SYS_FILE // 0x021_PROLOGUE.LOG</span>
+          <span class="block-tag glitch-text" data-text="[CLASSIFIED]"><span>[CLASSIFIED]</span></span>
+        </div>
+        <h2 class="category-title"><span class="cat-prefix">></span> THE ORIGIN OF THE LOOP</h2>
+        <p class="mono-sub">RECOVERED FRAGMENTS FROM CORRUPTED TERMINALS.</p>
+        <div class="console-divider"></div>
+
+        <p class="lore-text-content">
+          Симуляция никогда не предназначалась для разумных существ. То, что начиналось как рутинный стресс-тест на психологическую устойчивость в рекурсивных цифровых пространствах, быстро превратилось в неконтролируемое чистилище. Существа, оказавшиеся в ловушке, сообщают о серьезной деградации памяти и замедлении восприятия времени.
+        </p>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Вики-футер -->
+  <div class="wiki-footer">
+    <p>This page was last edited on 5 November 2026</p>
+    <div class="wiki-footer-links">
+      <a href="index.html">Main Page</a>
+      <span>•</span>
+      <a href="characters.html">Characters</a>
+      <span>•</span>
+      <a href="lore.html">Lore Files</a>
+      <span>•</span>
+      <a href="maps.html">Maps</a>
+      <span>•</span>
+      <a href="#">Privacy policy</a>
+    </div>
+  </div>
+
+  <!-- МОДАЛЬНОЕ ОКНО АВТОРИЗАЦИИ -->
+  <div id="authModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.85); z-index: 9999; align-items: center; justify-content: center;">
+    <div class="sys-block border-double" style="width: 100%; max-width: 440px; background: #080202; border: 3px double #8B0000; padding: 20px; position: relative;">
+      <div class="block-header" style="display: flex; justify-content: space-between; border-bottom: 1px solid #4A1515; padding-bottom: 6px; margin-bottom: 14px;">
+        <span style="color: #7E6A6A; font-size: 0.75rem; font-family: monospace;">[ AUTH_SIGN_IN ] // REGISTRY</span>
+        <button id="closeAuthModal" style="background: transparent; border: none; color: #FF1A1A; cursor: pointer; font-size: 0.9rem; font-family: monospace;">[ X ]</button>
+      </div>
+      
+      <h3 style="color: #FFFFFF; font-size: 1.4rem; text-align: center; margin-bottom: 10px; font-family: monospace;">SYSTEM AUTHENTICATION</h3>
+      <p style="color: #7E6A6A; font-size: 0.85rem; text-align: center; margin-bottom: 16px; font-family: monospace;">LOCAL BROWSER REGISTRY ACCESS</p>
+
+      <form onsubmit="return false;">
+        <div style="margin-bottom: 12px;">
+          <label style="color: #7E6A6A; font-size: 0.75rem; display: block; margin-bottom: 4px; font-family: monospace;">SUBJECT_NAME (LOGIN):</label>
+          <input type="text" id="authUsername" style="width: 100%; background: #020000; border: 1px solid #4A1515; padding: 8px; color: #FFFFFF; font-family: monospace;" autocomplete="off" required />
+        </div>
+
+        <div style="margin-bottom: 12px;">
+          <label style="color: #7E6A6A; font-size: 0.75rem; display: block; margin-bottom: 4px; font-family: monospace;">PASSCODE (PASSWORD):</label>
+          <input type="password" id="authPassword" style="width: 100%; background: #020000; border: 1px solid #4A1515; padding: 8px; color: #FFFFFF; font-family: monospace;" required />
+        </div>
+
+        <div id="authStatusMessage" style="min-height: 20px; text-align: center; font-size: 0.8rem; margin: 10px 0; font-family: monospace;"></div>
+
+        <div style="display: flex; gap: 10px; margin-top: 15px;">
+          <button type="button" id="loginBtn" style="flex: 1; background: #080202; color: #FFFFFF; border: 1px solid #8B0000; padding: 8px; cursor: pointer; font-family: monospace;">[ LOGIN ]</button>
+          <button type="button" id="registerBtn" style="flex: 1; background: #080202; color: #FFFFFF; border: 1px solid #8B0000; padding: 8px; cursor: pointer; font-family: monospace;">[ REGISTER ]</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script src="admin.js"></script>
+  <script src="search.js"></script>
+</body>
+</html>

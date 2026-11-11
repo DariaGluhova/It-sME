@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT'S ME // SUBJECT: REAPER</title>
+  <link rel="icon" type="image/png" href="rose.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Задний фон с эффектом битых пикселей -->
+  <div class="noise-overlay"></div>
+
+  <!-- Системная шапка -->
+  <header class="sys-header">
+    <div class="header-left">
+      <button class="sys-btn" id="authBtn">[ AUTH_SIGN_IN ]</button>
+      <span class="sys-status">SYS_STATUS: STABLE_0x08F</span>
+    </div>
+
+    <div class="sys-logo">
+      <span class="glitch-text" data-text="IT'S ME">IT'S ME</span>
+      <span class="sub-logo">// CORE_DOCUMENTATION_V0.1.08</span>
+    </div>
+
+    <div class="header-right">
+      <div class="search-wrapper">
+        <input type="text" class="sys-input" placeholder="SEARCH_DATABASE..." spellcheck="false">
+        <button class="search-btn" title="Execute Search">
+          <img src="magnifier.jpg" alt="Search">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Главный сетчатый контейнер -->
+  <div class="terminal-layout">
+
+    <!-- Навигационная консоль (5 кнопок) -->
+    <nav class="sys-nav" style="grid-column: 1 / -1; margin-bottom: 20px;">
+      <a href="index.html" class="nav-btn">[ HOME ]</a>
+      <a href="characters.html" class="nav-btn">[ 01_CHARACTERS ]</a>
+      <a href="lore.html" class="nav-btn">[ 02_LORE_FILES ]</a>
+      <a href="maps.html" class="nav-btn">[ 03_MAP_SCHEMATICS ]</a>
+      <a href="strategy.html" class="nav-btn">[ 04_STRATEGY_MATRIX ]</a>
+      <a href="mechanics.html" class="nav-btn">[ 05_GAME_MECHANICS ]</a>
+    </nav>
+
+    <!-- Основной рабочий терминал (контент Reaper) -->
+    <main class="main-terminal">
+      
+      <!-- Секция: DOSSIER OVERVIEW -->
+      <section class="sys-block border-double">
+        <div class="block-header">
+          <span class="block-id">SYS_FILE // 0x001_CHARACTER_PROFILE.LOG</span>
+          <span class="block-tag">[CLASSIFIED]</span>
+        </div>
+        <h2 class="block-title">PROFILE: REAPER</h2>
+        <div class="block-content">
+          <div style="display: flex; gap: 25px; align-items: flex-start; flex-wrap: wrap;">
+            <img src="reaper.png" alt="Reaper" style="width: 250px; height: 300px; object-fit: cover; border: 2px solid var(--accent-red); background: #020000; flex-shrink: 0;">
+            <div style="flex: 1; min-width: 250px;">
+              <p class="mono-sub" style="color: var(--accent-red); margin-bottom: 10px;">ID: 0x00_SURVIVOR // FORMER MAFIOSO</p>
+              <p>
+                Субъект <strong>Reaper</strong> фиксируется в секторах повышенной опасности. Обладает способностью подавлять локальные системы освещения и передвигаться на высокой скорости в условиях нулевой видимости.
+              </p>
+              <div class="console-divider"></div>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">
+                Бывший член синдиката, использующий свои навыки скрытности и тактического анализа для выживания в условиях аномальной симуляции.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Секция: BEHAVIORAL PATTERNS & TACTICS -->
+      <section class="sys-block border-glitch">
+        <div class="block-header">
+          <span class="block-id">SYS_FILE // 0x002_TACTICS.RAW</span>
+          <span class="block-tag glitch-text" data-text="[ANALYSIS]">[ANALYSIS]</span>
+        </div>
+        <h2 class="block-title glitch-text" data-text="BEHAVIORAL PATTERNS">BEHAVIORAL PATTERNS</h2>
+        <p class="mono-sub">SURVIVAL STRATEGY & ABILITIES</p>
+        
+        <div class="block-content" style="margin-top: 15px;">
+          <p>
+            Приближение субъекта сопровождается резким падением температуры и звуковыми помехами в радиоэфире. Рекомендуется использовать стационарные укрытия и избегать открытых коридоров.
+          </p>
+          <div class="console-divider"></div>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">
+            [ACTIVE PERK]: Высокая скорость передвижения при активации скрытности в тени объектов.
+          </p>
+        </div>
+      </section>
+
+      <!-- Секция: EXECUTE BACK -->
+      <section class="sys-block border-single execute-panel">
+        <div class="execute-info">
+          <span class="mono-label">NAVIGATION_PROMPT:</span>
+          <span class="mono-path">RETURN_TO_SUBJECTS_REGISTRY</span>
+        </div>
+        <a href="characters.html" class="exec-btn glitch-btn" data-text="[ BACK ]" style="text-decoration: none; text-align: center;">
+          [ BACK ]
+        </a>
+      </section>
+
+    </main>
+
+    <!-- Правая колонка (реестр субъектов) -->
+    <aside class="right-column">
+      
+      <!-- Блок: Реестр субъектов (CHARACTERS) -->
+      <div class="sys-block border-single">
+        <div class="block-header">
+          <span class="block-id">DATABASE // SUBJECTS</span>
+          <span class="block-tag">[INDEX]</span>
+        </div>
+        <h2 class="block-title side-title">CHARACTERS</h2>
+        
+        <div class="subject-list">
+          <div class="subject-card">
+            <div class="subject-avatar"><span>[OMB]</span></div>
+            <div class="subject-meta">
+              <div class="subject-name">OMBRA</div>
+              <div class="subject-spec">A LOST COMPUTER SCIENTIST.</div>
+              <div class="subject-code">ID: 0x8F_KILLER</div>
+            </div>
+          </div>
+
+          <div class="subject-card" style="border-left: 2px solid var(--accent-red); background: rgba(255,26,26,0.05);">
+            <div class="subject-avatar"><span>[RIP]</span></div>
+            <div class="subject-meta">
+              <div class="subject-name" style="color: var(--accent-red);">REAPER</div>
+              <div class="subject-spec">UNKNOWN RACE. FORMER MAFIOSO.</div>
+              <div class="subject-code">ID: 0x00_SURVIVOR</div>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-avatar"><span>[ARD]</span></div>
+            <div class="subject-meta">
+              <div class="subject-name">ARDI</div>
+              <div class="subject-spec">BIOORGANIC CHEMIST.</div>
+              <div class="subject-code">ID: 0x3C_SUPPORT</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- Вики-подвал с датой и копирайтом -->
+  <div class="wiki-footer">
+    <p>This page was last edited on 5 November 2026</p>
+    <div class="wiki-footer-links">
+      <a href="#">Privacy policy</a>
+      <span>•</span>
+      <a href="#">About It's ME Wiki</a>
+      <span>•</span>
+      <a href="#">Disclaimers</a>
+      <span>•</span>
+      <a href="#">Terms of Use</a>
+      <span>•</span>
+      <a href="#">Donate to TBouKpash</a>
+    </div>
+  </div>
+
+  <!-- МОДАЛЬНОЕ ОКНО АВТОРИЗАЦИИ -->
+  <div id="authModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.85); z-index: 9999; align-items: center; justify-content: center;">
+    <div class="sys-block border-double" style="width: 100%; max-width: 440px; background: #080202; border: 3px double #8B0000; padding: 20px; position: relative;">
+      <div class="block-header" style="display: flex; justify-content: space-between; border-bottom: 1px solid #4A1515; padding-bottom: 6px; margin-bottom: 14px;">
+        <span style="color: #7E6A6A; font-size: 0.75rem; font-family: monospace;">[ AUTH_SIGN_IN ] // REGISTRY</span>
+        <button id="closeAuthModal" style="background: transparent; border: none; color: #FF1A1A; cursor: pointer; font-size: 0.9rem; font-family: monospace;">[ X ]</button>
+      </div>
+      
+      <h3 style="color: #FFFFFF; font-size: 1.4rem; text-align: center; margin-bottom: 10px; font-family: monospace;">SYSTEM AUTHENTICATION</h3>
+      <p style="color: #7E6A6A; font-size: 0.85rem; text-align: center; margin-bottom: 16px; font-family: monospace;">LOCAL BROWSER REGISTRY ACCESS</p>
+
+      <form onsubmit="return false;">
+        <div style="margin-bottom: 12px;">
+          <label style="color: #7E6A6A; font-size: 0.75rem; display: block; margin-bottom: 4px; font-family: monospace;">SUBJECT_NAME (LOGIN):</label>
+          <input type="text" id="authUsername" style="width: 100%; background: #020000; border: 1px solid #4A1515; padding: 8px; color: #FFFFFF; font-family: monospace;" autocomplete="off" required />
+        </div>
+
+        <div style="margin-bottom: 12px;">
+          <label style="color: #7E6A6A; font-size: 0.75rem; display: block; margin-bottom: 4px; font-family: monospace;">PASSCODE (PASSWORD):</label>
+          <input type="password" id="authPassword" style="width: 100%; background: #020000; border: 1px solid #4A1515; padding: 8px; color: #FFFFFF; font-family: monospace;" required />
+        </div>
+
+        <div id="authStatusMessage" style="min-height: 20px; text-align: center; font-size: 0.8rem; margin: 10px 0; font-family: monospace;"></div>
+
+        <div style="display: flex; gap: 10px; margin-top: 15px;">
+          <button type="button" id="loginBtn" style="flex: 1; background: #080202; color: #FFFFFF; border: 1px solid #8B0000; padding: 8px; cursor: pointer; font-family: monospace;">[ LOGIN ]</button>
+          <button type="button" id="registerBtn" style="flex: 1; background: #080202; color: #FFFFFF; border: 1px solid #8B0000; padding: 8px; cursor: pointer; font-family: monospace;">[ REGISTER ]</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Скрипты -->
+  <script src="auth.js"></script>
+  <script src="admin.js"></script>
+  <script src="search.js"></script>
+</body>
+</html>
